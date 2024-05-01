@@ -1,8 +1,9 @@
 from Mailer import Mailer
+from core.services.FileService import FileService
 
 
 def main():
-    mailer = Mailer()
+    mailer = Mailer(FileService())
     mailer.connect()
     mailer.send_mail()
     mailer.close()
